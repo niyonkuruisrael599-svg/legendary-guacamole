@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #101d36;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #00d4ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .home {
+            min-height: 450px;
+            background: linear-gradient(120deg, #101d36, #075b91);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .home h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .home span {
+            color: #00d4ff;
+        }
+
+        .home p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #00d4ff;
+            color: #101d36;
+            padding: 13px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #075b91;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .services, .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #0001;
+        }
+
+        .card h3 {
+            color: #075b91;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            background: #e7f3fa;
+        }
+
+        input, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 14px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #075b91;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                font-size: 14px;
+            }
+
+            .home h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>MyWebsite</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <h1>Welcome to <span>My Website</span></h1>
+    <p>We create modern websites and digital experiences.</p>
+    <a href="#about" class="btn">Discover More</a>
+</section>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+        Welcome to our website. We are passionate about
+        technology, creativity and web development.
+        Our goal is to create beautiful and useful
+        digital experiences for everyone.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>We design beautiful and modern websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>We build responsive and useful websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Graphic Design</h3>
+            <p>We create creative digital designs.</p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Our Portfolio</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>Business Website</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 2</h3>
+            <p>School Website</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 3</h3>
+            <p>Personal Website</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Send us a message.</p>
+
+    <form action="mailto:your-email@example.com"
+          method="post" enctype="text/plain">
+
+        <input type="text" name="Name"
+               placeholder="Your Name" required>
+
+        <input type="email" name="Email"
+               placeholder="Your Email" required>
+
+        <textarea name="Message" rows="5"
+                  placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 MyWebsite. All Rights Reserved.</p>
+    <p>Designed with HTML and CSS.</p>
+</footer>
+
+</body>
+</html>
